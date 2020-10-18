@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/downloadSLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="my.awesome.rootdownloader.DownloadVideo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="180dp"
+        android:orientation="vertical"
+        android:id="@+id/downloadLayoutLinear">
+
+        <EditText
+            android:id="@+id/urlEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:inputType="textUri"
+            android:hint="@string/enter_url" />
+
+        <EditText
+            android:id="@+id/fileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginHorizontal="20dp"
+            android:hint="@string/file_name"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/downloadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/download"
+            android:focusable="false"
+            android:layout_marginTop="30dp"
+            android:clickable="false"
+            android:onClick="onClick"
+            style="@style/customButtonStyle"
+            android:layout_marginHorizontal="20dp"/>
+
+        <TextView
+            android:id="@+id/urlEg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fileEg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/file_eg_file_mp3_mp4_fpg_png"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</ScrollView>

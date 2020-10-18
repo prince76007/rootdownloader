@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Root Downloader</string>
+    <string name="exit">Exit</string>
+    <string name="enter_url">Enter URL:</string>
+    <string name="download">Download</string>
+    <string name="file_name">File name</string>
+    <string name="facebook">Facebook</string>
+    <string name="insta">Instagram</string>
+    <string name="by_file_link">By File Link</string>
+    <string name="file_eg_file_mp3_mp4_fpg_png">File name eg. File.mp3/mp4 or file name with file format extension</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_buttom_menu">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+</resources>
