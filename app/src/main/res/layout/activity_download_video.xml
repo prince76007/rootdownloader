@@ -24,7 +24,7 @@
             android:inputType="textUri"
             android:hint="@string/enter_url" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/fileName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

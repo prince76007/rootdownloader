@@ -21,6 +21,8 @@ import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -42,11 +44,14 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class DownloadVideo extends AppCompatActivity implements View.OnKeyListener,View.OnClickListener{
 
-    EditText urlText,fileName;
+    EditText urlText;
+    AutoCompleteTextView fileName;
     TextView urlEg;
     Button downloadButton;
     LinearLayout downloadLayoutLinear;
     String pathname,siteName;
+    ArrayAdapter<String> arrayAdapter;
+    String[] autoComps;
     Intent intent;
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -88,6 +93,10 @@ public class DownloadVideo extends AppCompatActivity implements View.OnKeyListen
         downloadLayoutLinear=findViewById(R.id.downloadLayoutLinear);
         urlText= findViewById(R.id.urlEditText);
         fileName=findViewById(R.id.fileName);
+        autoComps= new String[]{".mp4",".mp3",".jpg",".png",".mkv"};
+        arrayAdapter= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, autoComps);
+        fileName.setAdapter(arrayAdapter);
+        fileName.setThreshold(1);
         downloadLayoutLinear.setOnClickListener(this);
         fileName.setOnKeyListener(this);
 
